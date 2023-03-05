@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Homepage</title>
+	<link rel="stylesheet" href="style.css">
+      <style>* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: sans-serif;
+}
+
+.container {
+	width: 80%;
+	margin: 0 auto;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 0;
+	border-bottom: 1px solid #ccc;
+}
+
+h1 {
+	font-size: 36px;
+}
+
+.user-options {
+	display: flex;
+	align-items: center;
+}
+
+button {
+	background-color: #333;
+	color: #fff;
+	padding: 10px 20px;
+	border: none
+</style>
+</head>
+<body>
+	<div class="container">
+		<header>
+			<h1>Welcome to our Website</h1>
+			<div class="user-options">
+				<button id="login-btn">Login</button>
+				<button id="register-btn">Register</button>
+			</div>
+		</header>
+		<main>
+			<div class="product-details">
+				<img src="product.jpg" alt="Product Image">
+				<h2>Product Name</h2>
+				<p>Description of the product will be displayed here.</p>
+				<button id="buy-btn">Buy Now</button>
+			</div>
+			<div class="eligibility-docs">
+				<h3>Eligibility &amp; Documentation</h3>
+				<ul>
+					<li>Eligibility Criteria</li>
+					<li>Documentation Required</li>
+				</ul>
+			</div>
+			<div class="payment-details">
+				<h3>Card Details &amp; EMI Options</h3>
+				<p>Payment details and EMI options will be displayed here.</p>
+			</div>
+		</main>
+		<footer>
+			<p>&copy; 2023 All Rights Reserved</p>
+		</footer>
+	</div>
+	<!-- Login Modal -->
+	<div class="modal" id="login-modal">
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<form action="#" method="post">
+				<label for="username">Username:</label>
+				<input type="text" id="username" name="username"><br><br>
+				<label for="password">Password:</label>
+				<input type="password" id="password" name="password"><br><br>
+				<input type="submit" value="Login">
+			</form>
+		</div>
+	</div>
+	<!-- Registration Modal -->
+	<div class="modal" id="register-modal">
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<form action="#" method="post">
+				<label for="fullname">Full Name:</label>
+				<input type="text" id="fullname" name="fullname"><br><br>
+				<label for="email">Email:</label>
+				<input type="email" id="email" name="email"><br><br>
+				<label for="password">Password:</label>
+				<input type="password" id="password" name="password"><br><br>
+				<input type="submit" value="Register">
+			</form>
+		</div>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>

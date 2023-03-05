@@ -1,0 +1,15 @@
+view as guest       login       register----------check eleiguibility
+     |                |           |
+     |                |           |
+     |                |           |
+     |                |           |
+     ------------->Product list dashboard
+                          |
+                          |
+                      Product 1-------->Pay,display,balance amount
+                      Product 2
+                          - 
+                          -
+                          -   
+                      Product 1
+  

@@ -1,0 +1,107 @@
+// Define an array of products
+const products = [
+  {
+    name: "Sony Tv",
+    price: 200000,
+    image: "tv.jpg"
+  },
+  {
+    name: "Mobile",
+    price: 250000,
+    image: "mobile.png"
+  },
+  {
+    name: "Dell Laptop",
+    price: 280000,
+    image: "lap.jpg"
+  },
+  {
+    name: "Prestige 70",
+    price: 150000,
+    image: "owen.jpg"
+  },
+  {
+    name: "LG 8790",
+    price: 160000,
+    image: "wm.png"
+  },
+  {
+    name: "Marshal SE 98",
+    price: 175000,
+    image: "speaker.jpg"
+  },
+  {
+    name: "Whirlpool",
+price: 155000,
+image: "fri.png",
+description: "Whirlpool Refrigerator with 4-star energy rating and frost-free cooling technology.",
+features: [
+"Capacity: 280 Litres",
+"Frost-free Cooling Technology",
+"4-star Energy Rating",
+"Convertible Freezer",
+"IntelliSense Inverter Compressor"
+]
+},
+{
+name: "Voltas",
+price: 199999,
+image: "ac.png",
+description: "Voltas Inverter Split AC with 5-star energy rating and high ambient cooling.",
+features: [
+"Capacity: 1.5 Ton",
+"Inverter Compressor",
+"5-star Energy Rating",
+"High Ambient Cooling",
+"Copper Condenser Coil"
+]
+}
+];
+
+// function to generate HTML for product list
+function generateProductList(products) {
+const productList = document.querySelector("#productList");
+productList.innerHTML = "";
+
+products.forEach(product => {
+const listItem = document.createElement("li");
+listItem.classList.add("productItem");
+const image = document.createElement("img");
+image.src = product.image;
+image.alt = product.name;
+image.classList.add("productImage");
+listItem.appendChild(image);
+
+const name = document.createElement("h5");
+name.textContent = product.name;
+name.classList.add("productName");
+listItem.appendChild(name);
+
+const price = document.createElement("p");
+price.textContent = "Price: " + product.price;
+price.classList.add("productPrice");
+listItem.appendChild(price);
+
+const description = document.createElement("p");
+description.textContent = product.description;
+description.classList.add("productDescription");
+listItem.appendChild(description);
+
+const featuresList = document.createElement("ul");
+featuresList.classList.add("productFeatures");
+product.features.forEach(feature => {
+  const featureItem = document.createElement("li");
+  featureItem.textContent = feature;
+  featuresList.appendChild(featureItem);
+});
+listItem.appendChild(featuresList);
+
+const buyButton = document.createElement("button");
+buyButton.textContent = "Buy Now";
+buyButton.classList.add("buyButton");
+listItem.appendChild(buyButton);
+
+productList.appendChild(listItem);
+});
+}
+
